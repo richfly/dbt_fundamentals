@@ -10,10 +10,12 @@ sources:
         columns:
           - name: id
             description: PK
-            desription: primary key
-            data_tests: 
+            data_tests:
               - unique
               - not_null
+            config:
+              meta:
+                desription: primary key
       - name: orders
         description: raw orders data
         config:
@@ -25,4 +27,3 @@ sources:
               count: 1
               period: day
           loaded_at_field: _etl_loaded_at
-            
