@@ -3,7 +3,7 @@ models:
     description: The grain of this table is one unique customer per row
     columns:
       - name: customer_id
-        description: the primary key
+        description: PK for the customers table
         data_tests:
           - unique
           - not_null
@@ -12,6 +12,7 @@ models:
     description: One order per row
     columns:
       - name: order_id
+        description: PK for orders table
         data_tests:
           - unique
           - not_null
