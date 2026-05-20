@@ -2,17 +2,18 @@ version: 2
 
 sources:
   - name: jaffle_shop
+    description: Clone of Postgres DB
     database: raw
     tables:
       - name: customers
+        description: Raw customers data
         columns:
           - name: id
-            data_tests:
+            description: PK
+            desription: primary key
+            data_tests: 
               - unique
               - not_null
-            config:
-              meta:
-                desription: primary key
       - name: orders
         config:
           freshness:
@@ -23,3 +24,4 @@ sources:
               count: 1
               period: day
           loaded_at_field: _etl_loaded_at
+            
